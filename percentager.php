@@ -8,10 +8,10 @@ function randomSelect($parts = NULL) {
 	if($errored == 0) {
 		$partsCount = explode(", ", $parts);
 		if(count($partsCount) > 100) {
-			echo "Error: Cant work with more that 100 parts";
+			echo "Error: Can not work with more that 100 parts";
 			$errored = 1;
 		}elseif(count($partsCount) < 2) {
-			echo "Error: Cant work with only 1 part";
+			echo "Error: Can not work with only single part";
 			$errored = 1;
 		}
 	}
@@ -32,7 +32,7 @@ function randomSelect($parts = NULL) {
 			}
 			if($errored == 0) {
 				if($item_[1] > 99) {
-					echo "Error: Cant work with 100% part";
+					echo "Error: Can not work with part value above 100";
 					$errored = 1;
 				}
 			}
@@ -46,7 +46,7 @@ function randomSelect($parts = NULL) {
 			}
 		}
 		if($counter != 100) {
-			echo "Error: Count of parts is not 100";
+			echo "Error: Total value of parts is not 100";
 			$errored = 1;
 		}
 	}
